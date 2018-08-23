@@ -101,7 +101,7 @@ var LocalPdfManager = (function LocalPdfManagerClosure() {
       }
       promise.resolve(result);
     } catch (e) {
-      console.log(e.stack);
+      // console.log(e.stack);
       promise.reject(e);
     }
     return promise;
@@ -176,7 +176,7 @@ var NetworkPdfManager = (function NetworkPdfManagerClosure() {
       promise.resolve(result);
     } catch(e) {
       if (!(e instanceof MissingDataException)) {
-        console.log(e.stack);
+        // console.log(e.stack);
         promise.reject(e);
         return;
       }
